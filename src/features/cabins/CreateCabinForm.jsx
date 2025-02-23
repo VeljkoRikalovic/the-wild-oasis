@@ -5,8 +5,8 @@ import Button from "../../ui/Button";
 import FileInput from "../../ui/FileInput";
 import Textarea from "../../ui/Textarea";
 import FormRow from "../../ui/FormRow";
-import UseCreateCabin from "./UseCreateCabin";
-import UseEditCabin from "./UseEditCabin";
+import useCreateCabin from "./useCreateCabin";
+import useEditCabin from "./useEditCabin";
 
 function CreateCabinForm({ cabinToEdit = {}, onClose }) {
   const { id: editId, ...editValues } = cabinToEdit;
@@ -17,9 +17,9 @@ function CreateCabinForm({ cabinToEdit = {}, onClose }) {
   });
   const { errors } = formState;
 
-  const { createCabin, isCreating } = UseCreateCabin();
+  const { createCabin, isCreating } = useCreateCabin();
 
-  const { editCabin, isEditing } = UseEditCabin();
+  const { editCabin, isEditing } = useEditCabin();
 
   const isWorking = isCreating || isEditing;
 
