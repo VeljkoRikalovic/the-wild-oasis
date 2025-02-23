@@ -1,7 +1,7 @@
 import { cloneElement, createContext, useContext, useState } from "react";
 import { HiXMark } from "react-icons/hi2";
 import styled from "styled-components";
-import useOutSideClick from "../hooks/useOutSideClick";
+import useOutSideClick from "../hooks/useOutsideClick";
 
 const StyledModal = styled.div`
   position: fixed;
