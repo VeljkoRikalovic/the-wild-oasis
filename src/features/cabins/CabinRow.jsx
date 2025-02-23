@@ -3,7 +3,7 @@ import { formatCurrency } from "../../utils/helpers";
 import CreateCabinForm from "./CreateCabinForm";
 import { useDeleteCabins } from "./UseDeleteCabin";
 import { HiPencil, HiSquare2Stack, HiTrash } from "react-icons/hi2";
-import UseCreateCabin from "./UseCreateCabin";
+import useCreateCabin from "./useCreateCabin";
 import Modal from "../../ui/Modal";
 import ConfirmDelete from "../../ui/ConfirmDelete";
 import Table from "../../ui/Table";
@@ -42,7 +42,7 @@ function CabinRow({ cabin }) {
   const { id, name, maxCapacity, regularPrice, discount, description, image } =
     cabin;
 
-  const { createCabin } = UseCreateCabin();
+  const { createCabin } = useCreateCabin();
 
   function handleDuplicate() {
     createCabin({
