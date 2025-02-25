@@ -8,7 +8,7 @@ import { useLogin } from "./useLogin";
 
 function LoginForm() {
   const [email, setEmail] = useState("veljko@example.com");
-  const [password, setPassword] = useState("123456");
+  const [password, setPassword] = useState("12345");
   const { login, isLoading } = useLogin();
 
   function handleSubmit(e) {
